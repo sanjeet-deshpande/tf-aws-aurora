@@ -3,14 +3,14 @@
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| comp_product_service | Enter product service | string | - | yes |
-| comp_vars | Company Global variables | map | - | yes |
 | apply_immediately | Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. | string | `false` | no |
 | aurora_cluster_name |  | string | - | yes |
 | availability_zones | A comma separated list of Availability Zones in the Region. | list | `<list>` | no |
 | aws_security_groups | List of VPC security groups to associate with the Cluster. | list | - | yes |
 | backup_retention_period | The backup retention period | string | `30` | no |
 | cluster_size | Number of cluster instances to create | string | - | yes |
+| comp_product_service | Enter product service | string | - | yes |
+| comp_vars | Company Global variables | map | - | yes |
 | database_name | The name for your database of up to 8 alpha-numeric characters. | string | - | yes |
 | db_cluster_parameter_group_name | A cluster parameter group to associate with the cluster. | string | - | yes |
 | db_port | The port on which the DB accepts connections. | string | `3306` | no |
