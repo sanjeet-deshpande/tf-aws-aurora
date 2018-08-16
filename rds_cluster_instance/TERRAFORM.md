@@ -10,6 +10,7 @@
 | comp_product_service | Enter product service | string | - | yes |
 | comp_vars | Company Global variables | map | - | yes |
 | db_parameter_group_name | The name of the DB parameter group to associate with this instance. | string | - | yes |
+| engine_version | (Optional) The database engine version. | string | `5.6.10a` | no |
 | environment |  | string | - | yes |
 | instance_class | Instance class to use when creating RDS cluster - db.t2.small/db.t2.medium/db.r3.large/db.r3.xlarge/db.r3.2xlarge/db.r3.4xlarge/db.r3.8xlarge | string | `db.t2.medium` | no |
 | instance_identifier | Instance identifier to identify instances. | string | - | yes |
