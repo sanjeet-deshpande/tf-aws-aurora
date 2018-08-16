@@ -108,3 +108,8 @@ variable "db_cluster_parameter_group_name" {
 variable "kms_key_id" {
   description = "The ARN for the KMS encryption key"
 }
+
+variable "snapshot_identifier" {
+     description = " (Optional) Specifies whether or not to create this cluster from a snapshot. you can use name or ARN when specifying a DB cluster snapshot."
+     default = ""
+}

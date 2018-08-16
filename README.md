@@ -28,3 +28,8 @@ The input variables and output parameters are documented in
 * [RDS Cluster/TERRAFORM.md](https://github.com/sanjeet-deshpande/tf-aws-aurora/blob/master/rds_cluster/TERRAFORM.md)
 * [RDS Cluster Instance/TERRAFORM.md](https://github.com/sanjeet-deshpande/tf-aws-aurora/blob/master/rds_cluster_instance/TERRAFORM.md)
 * [RDS Cluster Parameter Group/TERRAFORM.md](https://github.com/sanjeet-deshpande/tf-aws-aurora/blob/master/rds_cluster_parameter_group/TERRAFORM.md)
+
+Changelog
+
+- [v0.0.2] 
+   - Added support to create Aurora Cluster from snapshot (Cluster restoration from snapshot).

@@ -33,6 +33,7 @@ resource "aws_rds_cluster" "aurora" {
   skip_final_snapshot = "${var.skip_final_snapshot}"
   engine              = "${var.rds_cluster_engine}"
   engine_version      = "${var.rds_cluster_engine_version}"
+  snapshot_identifier = "${var.snapshot_identifier}"
 
   lifecycle {
     prevent_destroy = "false" # https://www.terraform.io/docs/configuration/resources.html#prevent_destroy
