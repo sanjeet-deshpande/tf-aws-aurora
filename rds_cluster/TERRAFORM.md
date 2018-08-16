@@ -26,6 +26,7 @@
 | rds_cluster_engine_version | The database engine version. | string | `5.6.10a` | no |
 | role | Enter Role Name | string | - | yes |
 | skip_final_snapshot | Determines whether a final DB snapshot is created before the DB cluster is deleted. | string | `false` | no |
+| snapshot_identifier | (Optional) Specifies whether or not to create this cluster from a snapshot. you can use name or ARN when specifying a DB cluster snapshot. | string | `` | no |
 | storage_encrypted | Specifies whether the DB cluster is encrypted. | string | `true` | no |
 | vpc_id | VPC ID | string | - | yes |
 
