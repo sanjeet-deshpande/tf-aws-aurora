@@ -29,7 +29,18 @@ The input variables and output parameters are documented in
 * [RDS Cluster Instance/TERRAFORM.md](https://github.com/sanjeet-deshpande/tf-aws-aurora/blob/master/rds_cluster_instance/TERRAFORM.md)
 * [RDS Cluster Parameter Group/TERRAFORM.md](https://github.com/sanjeet-deshpande/tf-aws-aurora/blob/master/rds_cluster_parameter_group/TERRAFORM.md)
 
+Blog
+- Complete details are available on this blog - http://sanjeet-deshpande.blogspot.com/2018/05/terraform-modules-for-amazon-rds-aurora.html
+
 Changelog
 
+- [v0.0.1] 
+   - Initial version:
+     - Create RDS Aurora resources (DB Parameter Groups/Cluster Parameter Groups and DB Subnet groups)
+     - Create Empty Aurora Cluster
+     - Create Aurora cluster with data (Custom utility to restore data from s3 while creating aurora cluster)
+     - Create Aurora cluster instances.
 - [v0.0.2] 
    - Added support to create Aurora Cluster from snapshot (Cluster restoration from snapshot).
+- [v0.0.3]
+   - Added feature to choose old Aurora engine_version while creating Aurora instances. for example - Aurora cluster engine version - 5.6.10a and Instances belong this cluster are on - 5.6.10a.1.14.4 engine.

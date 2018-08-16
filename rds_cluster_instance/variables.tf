@@ -63,15 +63,12 @@ variable "promotion_tier" {
   default     = "0"
 }
 
-#variable "preferred_instance_backup_window" {
-#description = "The daily time range during which automated backups are created"
-#}
-
-#variable "preferred_instance_maintenance_window" {
-#description = "The window to perform maintenance in. Syntax: ddd:hh24:mi-ddd:hh24:mi"
-#}
-
 variable "auto_minor_version_upgrade" {
   description = "Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window."
   default     = true
+}
+
+variable "engine_version" {
+  description = "(Optional) The database engine version."
+  default     = "5.6.10a"
 }

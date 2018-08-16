@@ -17,6 +17,7 @@ resource "aws_rds_cluster_instance" "cluster_instance" {
   publicly_accessible     = "${var.publicly_accessible}"
   db_parameter_group_name = "${var.db_parameter_group_name}"
   promotion_tier          = "${var.promotion_tier}"
+  engine_version          = "${var.engine_version}"
   auto_minor_version_upgrade = "${var.auto_minor_version_upgrade}"
   tags {
     "Name"             = "${data.template_file.name_prefix_tpl.rendered}${format("%02d", count.index + 1)}"
