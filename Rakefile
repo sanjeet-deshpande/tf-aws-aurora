@@ -72,13 +72,15 @@ def gen_tf_docs
   `terraform-docs md db_parameter_group > db_parameter_group/TERRAFORM.md`
   `terraform-docs md db_option_group > db_option_group/TERRAFORM.md`
   `terraform-docs md rds_cluster > rds_cluster/TERRAFORM.md`
+  `terraform-docs md rds_cluster_restore_data_from_s3 > rds_cluster_restore_data_from_s3/TERRAFORM.md`
   `git add rds_cluster_parameter_group/TERRAFORM.md`
   `git add rds_cluster_instance/TERRAFORM.md`
   `git add db_subnet_group/TERRAFORM.md`
   `git add db_parameter_group/TERRAFORM.md`
   `git add db_option_group/TERRAFORM.md`
   `git add rds_cluster/TERRAFORM.md`
-  `git commit -m "Updating rds_cluster_parameter_group/TERRAFORM.md and rds_cluster_instance/TERRAFORM.md and db_subnet_group/TERRAFORM.md and db_parameter_group/TERRAFORM.md and db_option_group/TERRAFORM.md and rds_cluster/TERRAFORM.md"`
+  `git add rds_cluster_restore_data_from_s3/TERRAFORM.md`
+  `git commit -m "Updating rds_cluster_parameter_group/TERRAFORM.md and rds_cluster_instance/TERRAFORM.md and db_subnet_group/TERRAFORM.md and db_parameter_group/TERRAFORM.md and db_option_group/TERRAFORM.md and rds_cluster/TERRAFORM.md rds_cluster_restore_data_from_s3/TERRAFORM.md"`
 end
 
 desc 'Print the current version'

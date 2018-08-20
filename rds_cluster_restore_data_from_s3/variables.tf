@@ -2,36 +2,40 @@ variable "environment" {}
 
 variable "aurora_cluster_name" {}
 
+variable "comp_vars" {
+  type        = "map"
+  description = "Company Global variables"
+}
+
+variable "availability_zones" {
+  description = "A comma separated list of Availability Zones in the Region."
+  type        = "list"
+  default     = ["us-east-1b,us-east-1c"]
+}
+
 variable "aws_security_groups" {
   description = "List of VPC security groups to associate with the Cluster."
   type        = "list"
 }
 
-variable "aurora_cluster_identifier" {
-   description = "Please provide Aurora Cluster identifier"
-}
-
-variable "source_engine" {
-  description = "(Optional) The name of the database engine to be used for this DB cluster. Defaults to mysql."
-  default = "mysql"
-}
-
-variable "source_engine_version" {
-  description = "(Optional) The database engine version. Defaults to 5.6.10a"
-  default     = "5.6.10a"
-}
-
-variable "s3_prefix" {
-   description = "Please provide S3 prefix"
-}
 
 variable "db_port" {
   description = "The port on which the DB accepts connections."
   default     = 3306
 }
 
+variable "instance_class" {
+  description = "Instance class to use when creating RDS cluster - db.t2.small/db.t2.medium/db.r3.large/db.r3.xlarge/db.r3.2xlarge/db.r3.4xlarge/db.r3.8xlarge"
+  default     = "db.t2.medium"
+}
+
+variable "publicly_accessible" {
+  description = "Should the instance get a public IP address?"
+  default     = "false"
+}
+
 # see aws_rds_cluster documentation for these variables
-variable "restore_db_name" {
+variable "database_name" {
   description = "The name for your database of up to 8 alpha-numeric characters."
 }
 
@@ -63,29 +67,57 @@ variable "apply_immediately" {
   default     = false
 }
 
+variable "vpc_id" {
+  description = "VPC ID"
+}
+
+variable "comp_product_service" {
+  description = "Enter product service"
+}
+
+variable "role" {
+  description = "Enter Role Name"
+}
+
 variable "skip_final_snapshot" {
   description = "Determines whether a final DB snapshot is created before the DB cluster is deleted."
   default     = false
+}
+
+variable "rds_cluster_engine" {
+  description = "The name of the database engine to be used for this DB cluster."
+  default     = "aurora"
+}
+
+variable "rds_cluster_engine_version" {
+  description = "The database engine version."
+  default     = "5.6.10a"
+}
+
+variable "db_subnet_group_name" {
+  description = "A DB subnet group to associate with this DB instance."
 }
 
 variable "db_cluster_parameter_group_name" {
   description = "A cluster parameter group to associate with the cluster."
 }
 
-variable "aws_kms_key_id" {
+variable "kms_key_id" {
   description = "The ARN for the KMS encryption key"
 }
 
-variable "aws_rds_cluster_parameter_group_id" {
-  description = "Enter Aurora Cluster parameter group id."
+variable "source_engine" {
+  description = "(Optional) The name of the database engine to be used for this DB cluster. Defaults to mysql."
+  default = "mysql"
 }
 
-variable "rds_db_subnet_group_id" {
-   description = "Enter DB Subnet group id."
+variable "source_engine_version" {
+  description = "(Optional) The database engine version. Defaults to 5.6.10a"
+  default     = "5.6.10a"
 }
 
-variable "security_group_id" {
-   description = "Enter Aurora Security Group id."
+variable "s3_bucket_prefix" {
+   description = "Please provide S3 prefix"
 }
 
 variable "engine" {
@@ -97,6 +129,6 @@ variable "s3_bucket_name" {
   description = "Enter backup S3 bucket name."
 }
 
-variable "s3_ingestion_role_arn" {
+variable "ingestion_role_arn" {
    description = "Enter S3 ingestion Role ARN."
 }

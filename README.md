@@ -44,3 +44,5 @@ Changelog
    - Added support to create Aurora Cluster from snapshot (Cluster restoration from snapshot).
 - [v0.0.3]
    - Added feature to choose old Aurora engine_version while creating Aurora instances. for example - Aurora cluster engine version - 5.6.10a and Instances belong this cluster are on - 5.6.10a.1.14.4 engine.
+- [v0.0.4]
+   - Terraform started supporting data restoration from s3 - Support for s3_import has been added to the aws_rds_cluster resource as part of  v1.17.0 of the AWS provider. v0.0.1 has the cutom utility to restore data from s3 while creating Aurora cluster, that we have deprecated in v0.0.4.
