@@ -7,7 +7,7 @@ These types of resources are supported:
 - `DB Option Group`
 - `DB Parameter Group`
 - `DB Subnet Group`
-- `RDS Cluster - Without Data [Empty Cluster]`
+- `RDS Cluster - Without Data [Empty Cluster] + From snapshot`
 - `RDS Cluster - With data, restore from S3`
 - `RDS Cluster Instance`
 - `RDS Cluster Parameter Group`
