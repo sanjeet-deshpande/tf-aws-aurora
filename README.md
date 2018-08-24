@@ -32,7 +32,7 @@ The input variables and output parameters are documented in
 Blog
 - Complete details are available on this blog - http://sanjeet-deshpande.blogspot.com/2018/05/terraform-modules-for-amazon-rds-aurora.html
 
-#Changelog
+### Changelog
 
 - [v0.0.1] 
    - Initial version:
